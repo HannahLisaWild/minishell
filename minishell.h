@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kforfoli <kforfoli@student.42berlin.de>    +#+  +:+       +#+        */
+/*   By: hawild <hawild@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 15:54:00 by hawild            #+#    #+#             */
-/*   Updated: 2025/01/24 15:55:53 by kforfoli         ###   ########.fr       */
+/*   Updated: 2025/01/24 16:20:45 by hawild           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -232,7 +232,6 @@ int					ft_execute_command(char **args, t_builtin_cmd *builtins);
 void				ft_run_shell(t_envvar *env_list, t_builtin_cmd *builtins,
 						t_command *commands, t_token *tokens);
 char				*ft_strdup(const char *s);
-char				*ft_strndup(const char *src, size_t n);
 void				handle_redirections(t_command *cmd);
 void				expand_variables(t_command **cmds, t_envvar **env_list);
 void				add_env_var(t_envvar **env_list, char *key, char *value);
