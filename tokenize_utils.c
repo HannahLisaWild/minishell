@@ -6,7 +6,7 @@
 /*   By: kforfoli <kforfoli@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 23:45:50 by hawild            #+#    #+#             */
-/*   Updated: 2025/01/24 15:08:05 by kforfoli         ###   ########.fr       */
+/*   Updated: 2025/01/24 15:56:48 by kforfoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ t_token	*handle_dollar(char *input, int *i)
 		start = *i;
 		while (ft_isalnum(input[*i]) || input[*i] == '_')
 			(*i)++;
-		env_var = ft_strndup(&input[start], *i - start);
+		env_var = ft_substr(input, start, *i);
 		new_t = new_token(TOKEN_ENV_VAR, env_var);
 		free(env_var);
 	}
